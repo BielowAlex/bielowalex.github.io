@@ -1,0 +1,14 @@
+main{
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  margin-bottom: 150px;
+  overflow:hidden ;
+}
+
+@media screen and (max-width: 575px){
+  main{
+    gap: 70px;
+    margin-bottom: 70px;
+  }
+}

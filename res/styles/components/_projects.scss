@@ -1,0 +1,53 @@
+@import "../variables";
+
+.projects {
+  @include flex_dir_col;
+  row-gap: 70px;
+  padding: 10px 100px;
+  z-index: 20;
+
+  button {
+    @include neon_btn;
+    font-size: 20px;
+  }
+
+
+  &__list {
+    @include flex_dir_col;
+    width: 100%;
+    padding: 20px 20px 50px 20px;
+    row-gap: 80px;
+    transition: all 1s linear;
+    overflow: hidden;
+    border-bottom: 1px solid $section_line_color;
+  }
+}
+
+@media screen and (max-width: 845px) {
+  .projects {
+    padding: 10px 40px;
+  }
+}
+
+
+@media screen and (max-width: 845px) {
+  .projects {
+    padding: 10px 20px;
+    row-gap: 35px;
+
+    &__list{
+      row-gap: 80px;
+    }
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .projects {
+    padding: 10px 10px;
+    row-gap: 15px;
+
+    &__list{
+      row-gap: 80px;
+    }
+  }
+}

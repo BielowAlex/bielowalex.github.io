@@ -1,0 +1,78 @@
+@import "../variables";
+
+.background {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  background-image: url("../../images/constellation/Space.svg") ;
+  z-index: -10;
+
+svg{
+  height: 100%;
+  transform: scale(2) rotate(90deg);
+  width: 100%;
+  opacity: 0.3;
+    animation: move_title 10s linear infinite;
+}
+
+  .flash_light__top {
+    z-index: -10;
+    position: absolute;
+    top: -180px;
+    left: -180px;
+    background: $back_light_color;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 100px 100px 250px red;
+    animation: lighting_top 5s linear infinite;
+  }
+
+  .flash_light__bottom {
+    z-index: -10;
+    position: absolute;
+    bottom: -180px;
+    right: -180px;
+    background: $back_light_color;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    box-shadow: -100px -100px 250px red;
+    animation: lighting_bot 5s linear infinite;
+  }
+
+  //svg {
+  //  position: absolute;
+  //  left: 300px;
+  //  top: 40%;
+  //
+  //  transform: scale(1.5);
+  //  opacity: 0.3;
+  //  animation: move_title 10s linear infinite;
+  //}
+}
+
+
+@keyframes lighting_top {
+  0% {
+    box-shadow: 100px 100px 250px red;
+  }
+  50% {
+    box-shadow: 100px 100px 120px red;
+  }
+  100% {
+    box-shadow: 100px 100px 260px red;
+  }
+}
+
+@keyframes lighting_bot {
+  0% {
+    box-shadow: -100px -100px 250px red;
+  }
+  50% {
+    box-shadow: -100px -100px 120px red;
+  }
+  100% {
+    box-shadow: -100px -100px 260px red;
+  }
+}

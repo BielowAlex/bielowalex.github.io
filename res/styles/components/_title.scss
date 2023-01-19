@@ -1,0 +1,70 @@
+.title {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 100%;
+  overflow: hidden;
+
+  &__text {
+    display: block;
+    position: relative;
+    text-align: start;
+    font-weight: 200;
+    font-size: 52px;
+    color: $text_color;
+    text-transform: uppercase;
+    transition: all 1s ease;
+    opacity: 1;
+    transform: translateY(-100px);
+    animation: move_title 15s linear infinite;
+
+
+  }
+  &__underline {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 1px;
+    background: $section_line_color;
+    transition: all 1.5s linear;
+
+    &._active {
+      width: 100%;
+
+      .line {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1120px){
+  .title{
+    &__text{
+      font-size: 45px;
+    }
+  }
+}
+@media screen and (max-width: 1045px){
+  .title{
+    &__text{
+      font-size: 35px;
+    }
+  }
+}
+
+@media screen and (max-width: 830px){
+  .title{
+    &__text{
+      font-size: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 675px){
+  .title{
+    &__text{
+      font-size: 25px;
+    }
+  }
+}

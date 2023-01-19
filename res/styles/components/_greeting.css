@@ -1,0 +1,83 @@
+.greeting {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  z-index: 50;
+}
+.greeting .obj {
+  z-index: 50;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 190px;
+  height: 190px;
+  border: 1px solid rgba(255, 0, 38, 0.55);
+  border-radius: 50%;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 0, 38, 0.55);
+  transition: all 3s ease;
+  transform: translate(-50%, -50%) rotate(0);
+}
+.greeting .obj .light {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  border-radius: 50%;
+  background: rgba(194, 16, 42, 0.89);
+  transition: all 0.5s linear;
+  box-shadow: 1px 1px 10px red, 1px 1px 20px red, 1px 1px 40px red, 1px 1px 80px red, 1px 1px 160px red, 1px 1px 320px red, 1px 1px 640px red;
+  animation: obj_lighting 1s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  overflow: hidden;
+}
+.greeting .obj .light span {
+  position: absolute;
+  color: #05050c;
+  width: 70px;
+  text-transform: uppercase;
+  line-height: 20px;
+  text-align: center;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s linear;
+}
+.greeting .obj .light._active {
+  width: 100%;
+  height: 100%;
+  animation: none;
+  transition: all 1s linear;
+}
+.greeting .obj .light._active span {
+  opacity: 1;
+}
+.greeting svg {
+  position: absolute;
+  transition: all 1s ease;
+  transform: rotate(360deg);
+}
+.greeting svg path {
+  fill: rgba(255, 0, 38, 0.55);
+}
+.greeting._active {
+  transform: translate(0, 0) rotate(360deg);
+}
+
+@keyframes obj_lighting {
+  0% {
+    box-shadow: 1px 1px 10px red, 1px 1px 20px red, 1px 1px 40px red, 1px 1px 80px red, 1px 1px 160px red, 1px 1px 320px red, 1px 1px 640px red;
+  }
+  50% {
+    box-shadow: 1px 1px 5px red, 1px 1px 10px red, 1px 1px 20px red, 1px 1px 40px red, 1px 1px 80px red, 1px 1px 160px red, 1px 1px 320px red;
+  }
+  100% {
+    box-shadow: 1px 1px 10px red, 1px 1px 20px red, 1px 1px 40px red, 1px 1px 80px red, 1px 1px 160px red, 1px 1px 320px red, 1px 1px 640px red;
+  }
+}
+
+/*# sourceMappingURL=_greeting.css.map */

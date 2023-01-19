@@ -1,0 +1,725 @@
+.about-me {
+  @include flex_dir_col;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+
+  &__top {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    margin-top: 250px;
+    width: 100%;
+
+    .slider {
+      width: 100%;
+
+      .slides-list {
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 300px;
+
+        .slide {
+          position: absolute;
+          width: 800px;
+          left: 100%;
+          top: 50%;
+          transform: translateY(-50%);
+
+          h1 {
+            font-weight: 100;
+            font-size: 60px;
+            letter-spacing: 2px;
+            color: rgba(255, 0, 38, 0.73);
+          }
+
+          &:nth-child(1) {
+            left: 20%;
+          }
+        }
+      }
+    }
+
+    .moon_block {
+      position: absolute;
+      right: -180px;
+      top: 50%;
+      transform: translateY(-50%) scale(1.2);
+      animation: rotate_moon linear 42s infinite;
+
+      .moon {
+        cursor: url("../../images/other/cursor.png"), auto;
+      }
+
+    }
+
+
+    &::before {
+      content: '<h1>';
+      position: absolute;
+      bottom: 300px;
+      left: 220px;
+      font-weight: lighter;
+      color: rgba(255, 0, 38, 0.3);
+      animation: move_title 15s linear infinite;
+      font-size: 30px;
+    }
+
+    &::after {
+      content: '</h1>';
+      position: absolute;
+      top: 300px;
+      left: 220px;
+      font-weight: lighter;
+      color: rgba(255, 0, 38, 0.3);
+      animation: move_title 12s linear infinite;
+      font-size: 30px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 120px;
+    width: 100%;
+  }
+
+
+}
+
+@keyframes rotate_moon {
+  0% {
+    transform: translateY(-50%) scale(1.2) rotate(0);
+  }
+  100% {
+    transform: translateY(-50%) scale(1.2) rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .about-me {
+    &__bottom {
+      .facts {
+        &__list {
+          .fact {
+            &__text {
+              font-size: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1249px) {
+  .about-me {
+    &__top {
+
+      .slider {
+        .slides-list {
+          .slide {
+            h1 {
+              font-size: 50px;
+              letter-spacing: 2px;
+              color: rgba(255, 0, 38, 0.73);
+            }
+          }
+        }
+      }
+    }
+
+    &__bottom {
+      padding: 0 100px;
+
+
+
+      .facts {
+        &__list {
+          .fact {
+            &__text {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1123px) {
+  .about-me {
+    &__bottom {
+      .greeting {
+        width: 250px;
+        height: 250px;
+
+        &__advert {
+          width: 150px;
+          height: 150px;
+        }
+
+        &__circle {
+          ._rotate__item {
+            width: 250px;
+            height: 250px;
+          }
+        }
+      }
+
+      .facts {
+        &__list {
+          .fact {
+            &__text {
+              font-size: 20px;
+            }
+            &__number{
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .about-me {
+    &__top {
+      &::before {
+        left: 170px;
+
+      }
+
+      &::after {
+        left: 170px;
+      }
+
+      .slider {
+        .slides-list {
+          .slide {
+            width: 700px;
+
+            h1 {
+              font-size: 45px;
+              letter-spacing: 2px;
+              color: rgba(255, 0, 38, 0.73);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1047px) {
+  .about-me {
+    &__top {
+      &::before {
+        left: 150px;
+
+      }
+
+      &::after {
+        left: 150px;
+      }
+
+      .slider {
+        .slides-list {
+          .slide {
+            width: 600px;
+
+            h1 {
+              font-size: 40px;
+              letter-spacing: 1.5px;
+              color: rgba(255, 0, 38, 0.73);
+            }
+          }
+        }
+      }
+    }
+
+    &__bottom {
+      .greeting {
+        width: 200px;
+        height: 200px;
+
+        &__advert {
+          width: 120px;
+          height: 120px;
+
+          .message{
+            &__text{
+              font-size: 12px;
+              line-height: 15px;
+            }
+          }
+        }
+
+        &__circle {
+          ._rotate__item {
+            width: 200px;
+            height: 200px;
+          }
+        }
+      }
+
+      .facts {
+        &__list {
+          .fact {
+            &__text {
+              font-size: 18px;
+            }
+            &__number{
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .about-me {
+    &__bottom {
+      .facts {
+        &__list {
+          .fact {
+            &__text {
+              font-size: 16px;
+            }
+            &__number{
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 935px) {
+  .about-me {
+    &__top {
+      &::before {
+        left: 120px;
+
+      }
+
+      &::after {
+        left: 120px;
+      }
+
+      .slider {
+        .slides-list {
+          .slide {
+            width: 480px;
+
+            h1 {
+              font-size: 35px;
+              letter-spacing: 1px;
+              color: rgba(255, 0, 38, 0.73);
+            }
+          }
+        }
+      }
+
+      .moon_block {
+
+        transform: translateY(-50%) scale(1.1);
+
+      }
+    }
+  }
+}
+@media screen and (max-width: 880px) {
+  .about-me {
+    &__bottom {
+      padding: 0 90px;
+      .greeting {
+        width: 170px;
+        height: 170px;
+
+        &__advert {
+          width: 110px;
+          height: 110px;
+
+          .message{
+            &__text{
+              font-size: 12px;
+              line-height: 15px;
+            }
+          }
+        }
+
+        &__circle {
+          ._rotate__item {
+            width: 170px;
+            height: 170px;
+          }
+        }
+      }
+
+      .facts {
+        &__list {
+          .fact {
+            &__text {
+              font-size: 16px;
+              padding: 5px;
+            }
+            &__number{
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 845px) {
+  .about-me {
+    &__top {
+      &::before {
+        left: 100px;
+        font-size: 25px;
+        bottom: 270px;
+      }
+
+      &::after {
+        left: 100px;
+        font-size: 25px;
+        top: 270px;
+
+      }
+
+      .slider {
+        .slides-list {
+          .slide {
+            width: 400px;
+
+            h1 {
+              font-size: 30px;
+              letter-spacing: 1px;
+              color: rgba(255, 0, 38, 0.73);
+            }
+          }
+        }
+      }
+
+      .moon_block {
+
+        transform: translateY(-50%);
+
+        .moon {
+          transform: scale(0.7);
+        }
+      }
+    }
+
+    &__bottom{
+      padding: 0 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 725px) {
+  .about-me {
+    gap: 60px;
+    &__bottom{
+      padding: 0 30px;
+
+      .greeting {
+        width: 150px;
+        height: 150px;
+
+        &__advert {
+          width: 90px;
+          height: 90px;
+
+          .message{
+            &__text{
+              font-size: 12px;
+              line-height: 15px;
+            }
+          }
+        }
+
+        &__circle {
+          ._rotate__item {
+            width: 150px;
+            height: 150px;
+          }
+        }
+      }
+
+      .facts {
+        &__list {
+          .fact {
+            &__text {
+              font-size: 12px;
+              padding: 2px;
+            }
+            &__number{
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 680px) {
+  .about-me {
+    &__top {
+      margin-top: 200px;
+
+      &::before {
+        left: 80px;
+        font-size: 20px;
+        bottom: 240px;
+      }
+
+      &::after {
+        left: 80px;
+        font-size: 20px;
+        top: 240px;
+
+      }
+
+      .slider {
+        .slides-list {
+          .slide {
+            width: 350px;
+
+            h1 {
+              font-size: 25px;
+              letter-spacing: 1px;
+              color: rgba(255, 0, 38, 0.73);
+            }
+          }
+        }
+      }
+
+      .moon_block {
+        .moon {
+          transform: scale(0.6);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 585px) {
+  .about-me {
+    &__top {
+      margin-top: 150px;
+
+      &::before {
+        left: 30px;
+        font-size: 20px;
+        bottom: 240px;
+      }
+
+      &::after {
+        left: 30px;
+        font-size: 20px;
+        top: 240px;
+
+      }
+
+      .slider {
+        .slides-list {
+          .slide {
+            width: 350px;
+
+            h1 {
+              font-size: 25px;
+              letter-spacing: 1px;
+              color: rgba(255, 0, 38, 0.73);
+            }
+          }
+        }
+      }
+
+      .moon_block {
+        .moon {
+          transform: scale(0.5);
+        }
+      }
+    }
+    &__bottom{
+      padding: 0 10px;
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+
+      .greeting {
+        width: 150px;
+        height: 150px;
+
+        &__advert {
+          width: 90px;
+          height: 90px;
+
+          .message{
+            width: 5px;
+            height: 5px;
+            &__text{
+              width: 50px;
+              font-size: 12px;
+              line-height: 10px;
+            }
+          }
+        }
+
+        &__circle {
+          ._rotate__item {
+            width: 150px;
+            height: 150px;
+          }
+        }
+      }
+
+      .facts {
+        width: 100%;
+        &__list {
+          .fact {
+            &__text {
+              font-size: 13px;
+              padding: 2px;
+            }
+            &__number{
+              font-size: 17px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 495px) {
+  .about-me {
+    &__top {
+      margin-top: 120px;
+
+      &::before {
+        left: 25px;
+        font-size: 18px;
+        bottom: 240px;
+      }
+
+      &::after {
+        left: 25px;
+        font-size: 18px;
+        top: 240px;
+
+      }
+
+      .slider {
+        .slides-list {
+          .slide {
+            width: 280px;
+
+            h1 {
+              font-size: 20px;
+              color: rgba(255, 0, 38, 0.73);
+            }
+          }
+        }
+      }
+
+      .moon_block {
+        .moon {
+          transform: scale(0.45);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 416px) {
+  .about-me {
+    &__top {
+      margin-top: 100px;
+
+      &::before {
+        left: 20px;
+        font-size: 17px;
+        bottom: 240px;
+      }
+
+      &::after {
+        left: 20px;
+        font-size: 17px;
+        top: 240px;
+
+      }
+
+      .slider {
+        .slides-list {
+          .slide {
+            width: 280px;
+
+            h1 {
+              font-size: 20px;
+              color: rgba(255, 0, 38, 0.73);
+            }
+          }
+        }
+      }
+
+      .moon_block {
+        .moon {
+          transform: scale(0.4);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 398px) {
+  .about-me {
+    &__top {
+      margin-top: 100px;
+
+      &::before {
+        left: 20px;
+        font-size: 16px;
+        bottom: 240px;
+      }
+
+      &::after {
+        left: 20px;
+        font-size: 16px;
+        top: 240px;
+
+      }
+
+      .slider {
+        .slides-list {
+          .slide {
+            width: 250px;
+
+            h1 {
+              font-size: 17px;
+              color: rgba(255, 0, 38, 0.73);
+            }
+          }
+        }
+      }
+
+      .moon_block {
+        .moon {
+          transform: scale(0.35);
+        }
+      }
+    }
+  }
+}
