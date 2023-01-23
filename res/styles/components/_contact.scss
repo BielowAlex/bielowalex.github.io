@@ -81,7 +81,7 @@
         width: 50%;
       }
 
-      &--sub{
+      &--sub {
         font-size: 30px;
       }
 
@@ -173,6 +173,9 @@
         &:focus:-ms-input-placeholder {
           color: transparent
         }
+      }
+      .neon_btn{
+        font-size: 30px;
       }
 
       &--lb{

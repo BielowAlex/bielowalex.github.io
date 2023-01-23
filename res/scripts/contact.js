@@ -9,6 +9,12 @@ const inputs = [
     document.getElementById('message'),
 ]
 
+inputs[2].addEventListener('keyup',()=>{
+    if(inputs[2].scrollTop>0){
+        inputs[2].style.height = inputs[2].scrollHeight + 'px';
+   }
+});
+
 showFormBtn.onclick = () => {
     gsap.to(contactDiv, {
         opacity: 1,
@@ -82,7 +88,6 @@ const formValidator = () => {
 
 contactForm.addEventListener('submit', (event) => {
     event.preventDefault();
-
 
     if (!formValidator()) {
         emailjs.sendForm('service_50jqimd', 'template_miu5jzh', event.target, 'ctqj7GY5vzVNEDoWI')
