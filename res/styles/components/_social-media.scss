@@ -1,5 +1,5 @@
 .social-media {
-  @include flex_jus-sb_alc;
+  display: flex;
 
   &__link {
     display: flex;

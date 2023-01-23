@@ -19,16 +19,21 @@
   }
 
   &__social-media{
+    justify-content: center;
     gap: 30px;
-    width: 100px;
+    width: 100%;
 
     .social-media__link{
-      width: 45px;
+      min-width: 45px;
       height: 45px;
       padding: 5px;
       svg{
-        width: 22px;
+       min-width: 22px;
         height: 22px;
+        //path{
+        //  max-width: 22px;
+        //  height: 22px;
+        //}
       }
     }
   }
@@ -41,21 +46,11 @@
     .nav__link{
       font-weight: 100;
       font-size: 50px;
-      display: flex;
       transform: translateX(1000%);
       font-family: sans-serif;
 
 
-      &-num{
-        display: block;
-        height: fit-content;
-        background: $nav_color;
-        color: $back_color;
-        font-family: sans-serif;
-        font-weight: 500;
-        font-size: 12px;
-        padding: 2px;
-      }
+
     }
   }
 
@@ -67,14 +62,11 @@
     display: flex;
     flex-direction: column;
 
-
     .menu-title{
       font-family: sans-serif;
       color:rgba(255, 38, 0, 0.10);
       font-weight: 600;
       font-size: 250px;
-
-
     }
   }
 }

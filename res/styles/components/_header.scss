@@ -37,23 +37,13 @@
   &__logo {
     width: 70px;
   }
-}
 
-.nav {
-  display: flex;
-  gap: 40px;
-
-  &__link {
-    color: $nav_color;
-    font-weight: 200;
-    font-size: 16px;
-    transition: all ease 0.4s;
-
-    &:hover {
-      color: $text_color_hover;
-    }
+  &__nav {
+    gap: 40px;
   }
 }
+
+
 
 @media screen and (max-width: 555px){
   .header{
@@ -67,9 +57,10 @@
       .show-menu--btn{
         display: flex;
       }
+      .nav{
+        display: none;
+      }
     }
   }
-  .nav{
-    display: none;
-  }
+
 }
