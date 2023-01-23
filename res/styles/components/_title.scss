@@ -1,3 +1,5 @@
+@import "../colors";
+
 .title {
   display: flex;
   flex-direction: column;
@@ -17,9 +19,9 @@
     opacity: 1;
     transform: translateY(-100px);
     animation: move_title 15s linear infinite;
-
-
+    padding-top: 5px;
   }
+
   &__underline {
     display: flex;
     align-items: center;
@@ -38,32 +40,33 @@
   }
 }
 
-@media screen and (max-width: 1120px){
-  .title{
-    &__text{
+@media screen and (max-width: 1120px) {
+  .title {
+    &__text {
       font-size: 45px;
     }
   }
 }
-@media screen and (max-width: 1045px){
-  .title{
-    &__text{
+
+@media screen and (max-width: 1045px) {
+  .title {
+    &__text {
       font-size: 35px;
     }
   }
 }
 
-@media screen and (max-width: 830px){
-  .title{
-    &__text{
+@media screen and (max-width: 830px) {
+  .title {
+    &__text {
       font-size: 30px;
     }
   }
 }
 
-@media screen and (max-width: 675px){
-  .title{
-    &__text{
+@media screen and (max-width: 675px) {
+  .title {
+    &__text {
       font-size: 25px;
     }
   }
