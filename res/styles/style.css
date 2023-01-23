@@ -270,17 +270,8 @@ h1, h2, h3, h4, h5, h6 {
         width: 75%; }
 .header__logo {
   width: 70px; }
-
-.nav {
-  display: flex;
+.header__nav {
   gap: 40px; }
-  .nav__link {
-    color: rgba(255, 38, 0, 0.45);
-    font-weight: 200;
-    font-size: 16px;
-    transition: all ease 0.4s; }
-    .nav__link:hover {
-      color: rgba(255, 0, 38, 0.99); }
 
 @media screen and (max-width: 555px) {
   .header__logo {
@@ -289,8 +280,7 @@ h1, h2, h3, h4, h5, h6 {
       width: 50px; }
   .header .content .show-menu--btn {
     display: flex; }
-
-  .nav {
+  .header .content .nav {
     display: none; } }
 .about-me {
   display: flex;
@@ -1378,14 +1368,15 @@ textarea:-webkit-autofill:focus {
     width: 100%;
     padding: 20px; }
   .menu-overlay__social-media {
+    justify-content: center;
     gap: 30px;
-    width: 100px; }
+    width: 100%; }
     .menu-overlay__social-media .social-media__link {
-      width: 45px;
+      min-width: 45px;
       height: 45px;
       padding: 5px; }
       .menu-overlay__social-media .social-media__link svg {
-        width: 22px;
+        min-width: 22px;
         height: 22px; }
   .menu-overlay__nav {
     display: flex;
@@ -1394,18 +1385,8 @@ textarea:-webkit-autofill:focus {
     .menu-overlay__nav .nav__link {
       font-weight: 100;
       font-size: 50px;
-      display: flex;
       transform: translateX(1000%);
       font-family: sans-serif; }
-      .menu-overlay__nav .nav__link-num {
-        display: block;
-        height: fit-content;
-        background: rgba(255, 38, 0, 0.45);
-        color: #05050c;
-        font-family: sans-serif;
-        font-weight: 500;
-        font-size: 12px;
-        padding: 2px; }
   .menu-overlay__back-title {
     position: absolute;
     top: 60px;
@@ -1533,9 +1514,7 @@ main {
     color: #000; }
 
 .social-media {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
+  display: flex; }
   .social-media__link {
     display: flex;
     justify-content: center;
@@ -1574,6 +1553,27 @@ main {
     box-shadow: none; }
     .social-media__link:hover svg {
       animation: none; } }
+.nav {
+  display: flex;
+  gap: 40px; }
+  .nav__link {
+    display: flex;
+    color: rgba(255, 38, 0, 0.45);
+    font-weight: 200;
+    font-size: 16px;
+    transition: all ease 0.4s; }
+    .nav__link-num {
+      display: block;
+      height: fit-content;
+      background: rgba(255, 38, 0, 0.45);
+      color: #05050c;
+      font-family: sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      padding: 2px; }
+    .nav__link:hover {
+      color: rgba(255, 0, 38, 0.99); }
+
 :root {
   --posX:0;
   --posY:0; }
@@ -1668,6 +1668,7 @@ main {
   .footer {
     gap: 20px; }
     .footer__social-media {
+      justify-content: space-between;
       margin: 10px 0;
       width: 250px; }
       .footer__social-media .social-media__link {
