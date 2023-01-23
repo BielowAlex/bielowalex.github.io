@@ -31,9 +31,7 @@ body {
   cursor: url("../images/other/cursor-click.png"), auto;
 }
 
-.neon_btn {
-  @include neon_btn;
-}
+
 
 @keyframes move_title {
   0% {
