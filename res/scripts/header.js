@@ -15,13 +15,15 @@ const showHeaderAnimation = (isVisible) => {
 window.addEventListener('scroll', () => {
     if (scrollY > 0 && window.innerWidth > 555) {
         showHeaderAnimation(false);
-    } else if (scrollY === 0) {
+    } else if (scrollY === 0 && window.innerWidth > 555) {
         showHeaderAnimation(true);
     }
 });
 
 headerDiv.onmouseover = () => {
-    showHeaderAnimation(true);
+    if(window.innerWidth > 555){
+        showHeaderAnimation(true);
+    }
 }
 headerDiv.onmouseleave = () => {
     if (scrollY > 0 && window.innerWidth > 555) {
