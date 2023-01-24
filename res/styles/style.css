@@ -1467,45 +1467,45 @@ main {
   box-sizing: border-box;
   overflow: hidden;
   transition: all 1s ease;
-  cursor: url("../../images/other/cursor-click.png"), auto; }
+  cursor: url("../../images/other/cursor-click.png"), pointer; }
   .neon_btn .neon_line {
     position: absolute;
     display: block;
     border-radius: 100px; }
-  .neon_btn .neon_line__top {
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 5px;
-    background: rgba(192, 23, 35, 0.73);
-    transition: all 1s ease; }
+    .neon_btn .neon_line__top {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 5px;
+      background: rgba(192, 23, 35, 0.73);
+      transition: all 1s ease; }
+    .neon_btn .neon_line__bottom {
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      height: 5px;
+      background: rgba(192, 23, 35, 0.73);
+      transition: all 1s ease; }
+    .neon_btn .neon_line__left {
+      left: 0;
+      bottom: -100%;
+      width: 5px;
+      height: 100%;
+      background: rgba(192, 23, 35, 0.73);
+      transition: all 1s ease; }
+    .neon_btn .neon_line__right {
+      right: 0;
+      top: -100%;
+      width: 5px;
+      height: 100%;
+      background: rgba(192, 23, 35, 0.73);
+      transition: all 1s ease; }
   .neon_btn:hover .neon_line__top {
     left: 100%; }
-  .neon_btn .neon_line__bottom {
-    bottom: 0;
-    right: -100%;
-    width: 100%;
-    height: 5px;
-    background: rgba(192, 23, 35, 0.73);
-    transition: all 1s ease; }
   .neon_btn:hover .neon_line__bottom {
     right: 100%; }
-  .neon_btn .neon_line__left {
-    left: 0;
-    bottom: -100%;
-    width: 5px;
-    height: 100%;
-    background: rgba(192, 23, 35, 0.73);
-    transition: all 1s ease; }
   .neon_btn:hover .neon_line__left {
     bottom: 100%; }
-  .neon_btn .neon_line__right {
-    right: 0;
-    top: -100%;
-    width: 5px;
-    height: 100%;
-    background: rgba(192, 23, 35, 0.73);
-    transition: all 1s ease; }
   .neon_btn:hover .neon_line__right {
     top: 100%; }
   .neon_btn:hover {
@@ -1514,6 +1514,20 @@ main {
     background: rgba(192, 23, 35, 0.73);
     color: #000; }
 
+@media screen and (max-width: 556px) {
+  .neon_btn:hover .neon_line__top {
+    left: -100%; }
+  .neon_btn:hover .neon_line__bottom {
+    right: -100%; }
+  .neon_btn:hover .neon_line__left {
+    bottom: -100%; }
+  .neon_btn:hover .neon_line__right {
+    top: -100%; }
+  .neon_btn:hover {
+    transition: all 0.5s ease 0.2s;
+    box-shadow: none;
+    background: rgba(192, 23, 35, 0);
+    color: #c01723; } }
 .social-media {
   display: flex; }
   .social-media__link {
