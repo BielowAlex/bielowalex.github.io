@@ -74,9 +74,11 @@
     align-items: center;
     column-gap: 20px;
 
-    .neon_btn {
-      font-size: 16px;
-    }
+
+  }
+  &__button {
+    font-size: 16px;
+    text-transform: uppercase;
   }
 
   &:nth-child(2n) {

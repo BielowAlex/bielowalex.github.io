@@ -833,8 +833,9 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: space-between;
     align-items: center;
     column-gap: 20px; }
-    .project__buttons .neon_btn {
-      font-size: 16px; }
+  .project__button {
+    font-size: 16px;
+    text-transform: uppercase; }
   .project:nth-child(2n) {
     flex-direction: row-reverse; }
     .project:nth-child(2n) .project__poster .project__img {
@@ -1524,11 +1525,14 @@ main {
     height: 46px;
     font-size: 24px;
     border: 1px solid rgba(255, 0, 38, 0.74);
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
     transition: all 0.4s ease; }
-    .social-media__link svg path {
-      fill: rgba(255, 0, 38, 0.74); }
+    .social-media__link svg {
+      width: 22px;
+      height: 22px; }
+      .social-media__link svg path {
+        fill: rgba(255, 0, 38, 0.74); }
     .social-media__link:hover {
       box-shadow: inset 0 0 10px red; }
       .social-media__link:hover svg {
@@ -1549,10 +1553,19 @@ main {
     opacity: 1;
     transform: translate(0, 0); } }
 @media screen and (max-width: 556px) {
-  .social-media__link:hover {
-    box-shadow: none; }
-    .social-media__link:hover svg {
-      animation: none; } }
+  .footer .social-media {
+    gap: 0;
+    margin-top: 0; }
+    .footer .social-media__link {
+      min-width: 41px;
+      height: 41px;
+      padding: 2px; }
+      .footer .social-media__link:hover {
+        box-shadow: none; }
+        .footer .social-media__link:hover svg {
+          min-width: 18px;
+          height: 18px;
+          animation: none; } }
 .nav {
   display: flex;
   gap: 40px; }
@@ -1677,8 +1690,11 @@ main {
         height: 40px; }
     .footer .content .languages__list {
       font-size: 12px; }
+    .footer .content .languages__title {
+      font-family: sans-serif; }
     .footer .content .email {
-      font-size: 10px; }
+      font-size: 10px;
+      font-family: sans-serif; }
     .footer .show-form--btn img {
       width: 125px;
       height: 175px; } }
