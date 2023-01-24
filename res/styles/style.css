@@ -926,7 +926,7 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     letter-spacing: 4px;
     color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke-color: rgba(255, 0, 38, 0.74);
+    -webkit-text-stroke-color: #FF0026BC;
     -webkit-text-stroke-width: 1px; }
   .experience__desc {
     display: block;
