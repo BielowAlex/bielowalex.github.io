@@ -243,35 +243,45 @@ h1, h2, h3, h4, h5, h6 {
   .link:hover {
     color: rgba(255, 0, 38, 0.99); }
 
-.header .content {
+.header {
+  background: rgba(5, 5, 12, 0.84);
+  width: 100%;
   position: fixed;
   z-index: 99999;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(5, 5, 12, 0.84);
-  padding: 10px;
-  top: 0;
-  width: 100%; }
-  .header .content .show-menu--btn {
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 30px;
-    overflow: hidden; }
-    .header .content .show-menu--btn .line {
-      width: 100%;
-      height: 1px;
-      background: rgba(255, 0, 38, 0.99); }
-      .header .content .show-menu--btn .line:nth-last-child(1) {
-        width: 50%; }
-      .header .content .show-menu--btn .line:nth-last-child(2) {
-        width: 75%; }
-.header__logo {
-  width: 70px; }
-.header__nav {
-  gap: 40px; }
+  transition: all linear 0.5s;
+  height: 100px; }
+  .header .content {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    top: 0;
+    width: 100%; }
+    .header .content .show-menu--btn {
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 30px;
+      overflow: hidden; }
+      .header .content .show-menu--btn .line {
+        width: 100%;
+        height: 1px;
+        background: rgba(255, 0, 38, 0.99); }
+        .header .content .show-menu--btn .line:nth-last-child(1) {
+          width: 50%; }
+        .header .content .show-menu--btn .line:nth-last-child(2) {
+          width: 75%; }
+  .header__logo {
+    width: 90px; }
+  .header__nav, .header .nav {
+    align-items: center;
+    gap: 40px;
+    min-height: 100%;
+    background: rgba(5, 5, 12, 0.84);
+    padding: 10px;
+    border-radius: 10px; }
 
 @media screen and (max-width: 555px) {
   .header__logo {
@@ -1587,8 +1597,8 @@ main {
   .nav__link {
     display: flex;
     color: rgba(255, 38, 0, 0.45);
-    font-weight: 200;
-    font-size: 16px;
+    font-weight: 400;
+    font-size: 18px;
     transition: all ease 0.4s; }
     .nav__link-num {
       display: block;
