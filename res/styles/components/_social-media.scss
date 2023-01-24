@@ -10,11 +10,13 @@
     height: 46px;
     font-size: 24px;
     border: 1px solid $text_color;
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
     transition: all 0.4s ease;
 
     svg {
+      width: 22px;
+      height: 22px;
       path{
         fill: $text_color;
       }
@@ -59,13 +61,22 @@
 }
 
 @media screen and (max-width: 556px){
-  .social-media{
-    &__link{
-      &:hover{
-        box-shadow: none;
+  .footer{
+    .social-media{
+      gap: 0;
+      margin-top: 0;
+      &__link{
+        min-width: 41px;
+        height: 41px;
+        padding: 2px;
+        &:hover{
+          box-shadow: none;
 
-        svg{
-          animation: none;
+          svg{
+            min-width: 18px;
+            height: 18px;
+            animation: none;
+          }
         }
       }
     }
