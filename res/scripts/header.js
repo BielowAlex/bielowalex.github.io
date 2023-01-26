@@ -3,7 +3,6 @@ const logo = document.querySelector('.logo_img');
 
 const showHeaderAnimation = (isVisible) => {
     gsap.to(headerDiv, {
-        // background: isVisible ? 'rgba(5, 5, 12, 0.84)' : 'none',
         duration: 0.2,
         height: isVisible ? '100px' : '70px'
     });
