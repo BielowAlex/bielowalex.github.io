@@ -284,14 +284,18 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 10px; }
 
 @media screen and (max-width: 555px) {
-  .header__logo {
-    width: 50px; }
-    .header__logo .logo_img {
-      width: 50px; }
-  .header .content .show-menu--btn {
-    display: flex; }
-  .header .content .nav {
-    display: none; } }
+  .header {
+    height: 60px; }
+    .header__logo {
+      width: 50px;
+      height: 45px; }
+      .header__logo .logo_img {
+        width: 50px;
+        height: 45px; }
+    .header .content .show-menu--btn {
+      display: flex; }
+    .header .content .nav {
+      display: none; } }
 .about-me {
   display: flex;
   flex-direction: column;
@@ -1064,7 +1068,8 @@ h1, h2, h3, h4, h5, h6 {
       opacity: 0.3;
       transition: all 0.7s linear; }
       .skills__list .skill img {
-        width: 120px; }
+        width: 120px;
+        height: 120px; }
       .skills__list .skill:hover {
         opacity: 1; }
     .skills__list:hover {
@@ -1079,7 +1084,8 @@ h1, h2, h3, h4, h5, h6 {
   .skills__list {
     gap: 30px; }
     .skills__list .skill img {
-      width: 90px; }
+      width: 90px;
+      height: 90px; }
 
   @keyframes skillsCarrousel {
     0% {
@@ -1092,7 +1098,8 @@ h1, h2, h3, h4, h5, h6 {
     .skills__list {
       gap: 30px; }
       .skills__list .skill img {
-        width: 85px; }
+        width: 85px;
+        height: 85px; }
 
   @keyframes skillsCarrousel {
     0% {
@@ -1105,7 +1112,8 @@ h1, h2, h3, h4, h5, h6 {
     .skills__list {
       gap: 25px; }
       .skills__list .skill img {
-        width: 80px; }
+        width: 80px;
+        height: 80px; }
 
   @keyframes skillsCarrousel {
     0% {
@@ -1119,7 +1127,8 @@ h1, h2, h3, h4, h5, h6 {
       padding: 20px 0;
       gap: 25px; }
       .skills__list .skill img {
-        width: 65px; }
+        width: 65px;
+        height: 65px; }
 
   @keyframes skillsCarrousel {
     0% {

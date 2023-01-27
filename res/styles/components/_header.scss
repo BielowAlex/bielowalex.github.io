@@ -57,10 +57,13 @@
 
 @media screen and (max-width: 555px){
   .header{
+    height: 60px;
     &__logo{
       width: 50px;
+      height: 45px;
       .logo_img{
         width:50px;
+        height: 45px;
       }
     }
     .content{
