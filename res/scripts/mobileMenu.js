@@ -6,19 +6,12 @@ let isVisible = false;
 
 showMenuBtn.onclick = () => {
 
-    if (!isVisible) {
         buttonChangingAnimation(isVisible);
         showHideMenuAnimation(isVisible);
         showHideLinksAnimation(isVisible);
 
         isVisible = !isVisible;
-    } else {
-        buttonChangingAnimation(isVisible);
-        showHideMenuAnimation(isVisible);
-        showHideLinksAnimation(isVisible);
 
-        isVisible = !isVisible;
-    }
 };
 
 const showHideLinksAnimation = (isVisible) => {
